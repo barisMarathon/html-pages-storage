@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Balıma Günaydın!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff69b4;
+            font-size: 3em;
+        }
+        .pets {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .pets img {
+            width: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .pets img:hover {
+            transform: scale(1.1);
+        }
+        .heart {
+            color: red;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Günaydın Balım! ❤️</h1>
+        <p style="font-size: 1.5em;">Uyanışına özel hazırladığım sürpriz sayfaya hoş geldin!</p>
+        <div class="pets">
+            <img src="https://placekitten.com/300/300" alt="Kedi">
+            <img src="https://placedog.net/300/300" alt="Köpek">
+        </div>
+        <p style="font-size: 1.2em;">Biliyorum ki kedileri ve köpekleri çok seviyorsun!</p>
+        <p class="heart">💖</p>
+        <p style="font-size: 1.3em;">Harika bir gün geçirmeni diliyorum!</p>
+    </div>
+</body>
+</html>
