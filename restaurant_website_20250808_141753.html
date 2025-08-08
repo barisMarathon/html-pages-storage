@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akallar Kafe Bistro</title>
+    <style>
+        :root {
+            --primary: #ff6b6b;
+            --secondary: #4ecdc4;
+            --dark: #2d3436;
+            --light: #f9f9f9;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d3436);
+            color: var(--light);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .menu-item .price {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            color: var(--light);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-item {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+            animation-delay: calc(var(--item-index) * 0.1s);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Akallar Kafe Bistro</h1>
+        </header>
+
+        <div class="category">
+            <h2 class="category-title">Kahvaltı</h2>
+            <div class="menu-grid">
+                <div class="menu-item" style="--item-index: 1">
+                    <h3>Serpme Kahvaltı</h3>
+                    <div class="price">52₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 2">
+                    <h3>Vegan Kahvaltı</h3>
+                    <div class="price">52₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 3">
+                    <h3>Hızlı Kahvaltı Tabağı</h3>
+                    <div class="price">52₺</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">Ana Yemekler</h2>
+            <div class="menu-grid">
+                <div class="menu-item" style="--item-index: 4">
+                    <h3>Dana Strogonoff</h3>
+                    <div class="price">52₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 5">
+                    <h3>Körili Tavuk</h3>
+                    <div class="price">52₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 6">
+                    <h3>Izgara Tavuk</h3>
+                    <div class="price">52₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 7">
+                    <h3>Bonfile</h3>
+                    <div class="price">52₺</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2 class="category-title">İçecekler</h2>
+            <div class="menu-grid">
+                <div class="menu-item" style="--item-index: 8">
+                    <h3>Su</h3>
+                    <div class="price">10₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 9">
+                    <h3>Ayran</h3>
+                    <div class="price">10₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 10">
+                    <h3>Türk Kahvesi</h3>
+                    <div class="price">10₺</div>
+                </div>
+                <div class="menu-item" style="--item-index: 11">
+                    <h3>Kola</h3>
+                    <div class="price">10₺</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
