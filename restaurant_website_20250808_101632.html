@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzarama Restoran Zinciri</title>
+    <style>
+        :root {
+            --primary: #ff6b6b;
+            --secondary: #4ecdc4;
+            --dark: #2d3436;
+            --light: #f9f9f9;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1e272e 0%, #485460 100%);
+            color: var(--light);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .price {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .price::before {
+            content: "₺";
+            margin-right: 2px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .category {
+            margin-bottom: 3rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            color: var(--light);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pizzarama Restoran Zinciri</h1>
+        </header>
+
+        <section class="category">
+            <h2 class="category-title">Başlangıçlar</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Peynirli Focaccia</h3>
+                    <div class="price">8.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Sarımsaklı Mantar</h3>
+                    <div class="price">12.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Domates Bruschetta</h3>
+                    <div class="price">9.50</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Sarımsaklı Ekmek</h3>
+                    <div class="price">7.00</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">Pizzalar</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Margherita</h3>
+                    <div class="price">12.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Hawaii</h3>
+                    <div class="price">15.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Mantarlı</h3>
+                    <div class="price">15.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Jambonlu Peynirli</h3>
+                    <div class="price">12.50</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Vejetaryen</h3>
+                    <div class="price">14.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Pepperoni</h3>
+                    <div class="price">14.00</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">Makarnalar</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Bolonez Soslu Spagetti</h3>
+                    <div class="price">12.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Tavuklu Pestolu Penne</h3>
+                    <div class="price">10.50</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Domatesli Peynirli Penne</h3>
+                    <div class="price">11.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Napolitana Penne</h3>
+                    <div class="price">11.50</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category">
+            <h2 class="category-title">Tatlılar</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Tiramisu</h3>
+                    <div class="price">10.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Özel Soslu Çikolatalı Kek</h3>
+                    <div class="price">10.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Panna Cotta</h3>
+                    <div class="price">12.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Özel Roma Dondurması</h3>
+                    <div class="price">8.00</div>
+                </div>
+                <div class="menu-item">
+                    <h3>Dondurmalı Elmalı Turta</h3>
