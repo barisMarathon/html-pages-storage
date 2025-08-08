@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzarama Restoran Zinciri</title>
+    <style>
+        :root {
+            --primary: #ff4d4d;
+            --secondary: #2c3e50;
+            --text: #333;
+            --background: #f9f9f9;
+            --card-bg: rgba(255, 255, 255, 0.9);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            min-height: 100vh;
+            padding: 2rem;
+            color: var(--text);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item h3 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .price::before {
+            content: '₺';
+            margin-right: 2px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-item {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .menu-item:nth-child(n) {
+            animation-delay: calc(n * 0.1s);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pizzarama Restoran Zinciri</h1>
+        </header>
+        <div class="menu-grid">
+            <script>
+                const menuData = {
+  "restaurant_name": "Pizzarama Restoran Zinciri",
+  "products": [
+    {
+      "name": "Peynirli Focaccia",
+      "price": "8.00",
+      "description": ""
+    },
+    {
+      "name": "Sarimsakli Mantar",
+      "price": "12.00",
+      "description": ""
+    },
+    {
+      "name": "Domates Bruschetta",
+      "price": "9.50",
+      "description": ""
+    },
+    {
+      "name": "Sarimsakli Ekmek",
+      "price": "7.00",
+      "description": ""
+    },
+    {
+      "name": "Margherita",
+      "price": "12.00",
+      "description": ""
+    },
+    {
+      "name": "Hawaii",
+      "price": "15.00",
+      "description": ""
+    },
+    {
+      "name": "Mantarli",
+      "price": "15.00",
+      "description": ""
+    },
+    {
+      "name": "Jambonlu Peynirli",
+      "price": "12.50",
+      "description": ""
+    },
+    {
+      "name": "Vejetaryen",
+      "price": "14.00",
+      "description": ""
+    },
+    {
+      "name": "Pepperoni",
+      "price": "14.00",
+      "description": ""
+    },
+    {
+      "name": "Pesto Tavuk",
+      "price": "18.00",
+      "description": ""
+    },
+    {
+      "name": "Deniz Mahsulleri",
+      "price": "18.00",
+      "description": ""
+    },
+    {
+      "name": "Özel Etli",
+      "price": "18.00",
+      "description": ""
+    },
+    {
+      "name": "Dört Peynirli",
+      "price": "18.00",
+      "description": ""
+    },
+    {
+      "name": "Avokadolu (Vegan)",
+      "price": "18.00",
+      "description": ""
+    },
+    {
+      "name": "Bolonez Soslu Spagetti",
+      "price": "12.00",
+      "description": ""
+    },
+    {
+      "name": "Tavuklu Pestolu Penne",
+      "price": "10.50",
+      "description": ""
+    },
+    {
+      "name": "Domatesli Peynirli Penne",
+      "price": "11.00",
+      "description": ""
+    },
+    {
+      "name": "Napolitana Penne",
+      "price": "11.50",
+      "description": ""
+    },
+    {
+      "name": "Tiramisu",
+      "price": "10.00",
+      "description": ""
+    },
+    {
+      "name": "Özel Soslu Çikolatalı Kek",
+      "price": "10.00",
+      "description": ""
+    },
+    {
+      "name": "Panna Cotta",
+      "price": "12.00",
+      "description": ""
+    },
+    {
+      "name": "Özel Roma Dondurmasi",
+      "price": "8.00",
+      "description": ""
+    },
+    {
+      "name": "Dondurmali Elmali Turta",
+      "price": "8.50",
+      "description": ""
+    }
+  ]
+};
+
+                menuData.products.forEach(product => {
+                    document.write(`
+                        <div class="menu-item">
+                            <h3>${product.name}</h3>
+                            
