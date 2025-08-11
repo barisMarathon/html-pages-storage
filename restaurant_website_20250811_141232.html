@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIGET Steak & Co.</title>
+    <style>
+        :root {
+            --primary: #f8b400;
+            --text: #ffffff;
+            --background: #1a1a1a;
+            --card-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-name {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .menu-item {
+            background: var(--card-bg);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary);
+        }
+
+        .menu-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .menu-item .price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .restaurant-name {
+                font-size: 2.5rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-item {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .menu-item:nth-child(n) {
+            animation-delay: calc(n * 0.1s);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="restaurant-name">BIGET Steak & Co.</h1>
+    </header>
+    
+    <div class="container">
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Çorba</h3>
+                <p class="price">35₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Sigara Böreği</h3>
+                <p class="price">85₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Paçanga Böreği</h3>
+                <p class="price">95₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Çıtır Kalamar</h3>
+                <p class="price">135₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>İçli Köfte</h3>
+                <p class="price">85₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Avokadolu Humus</h3>
+                <p class="price">95₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Parmesanlı Patates</h3>
+                <p class="price">75₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Avokado Ezmesi</h3>
+                <p class="price">115₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Humus</h3>
+                <p class="price">65₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Atom</h3>
+                <p class="price">65₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Haydari</h3>
+                <p class="price">55₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Ezme</h3>
+                <p class="price">55₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Lavaş</h3>
+                <p class="price">35₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Mevsim Salata</h3>
+                <p class="price">95₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Çoban Salata</h3>
+                <p class="price">95₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Göbek Salata</h3>
+                <p class="price">95₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Ton Balıklı Salata</h3>
+                <p class="price">135₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>İskender</h3>
+                <p class="price">99₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>İskender 1,5</h3>
+                <p class="price">139₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>İskender Dürüm</h3>
+                <p class="price">119₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Dama Bonfile</h3>
+                <p class="price">195₺</p>
+            </div>
+            <div class="menu-item">
+                <h3>Dama Lokum</h3>
+                <p class="price">175₺</p>
+            </div>
+            <div class="menu-item">
+                <h
