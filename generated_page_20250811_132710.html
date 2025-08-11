@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Heaven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .meme-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .meme-card img {
+            width: 100%;
+            height: auto;
+        }
+        .meme-info {
+            padding: 15px;
+        }
+        .like-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .nav-bar {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔥 Meme Heaven 🔥</h1>
+        <p>Your Daily Dose of Laughter</p>
+    </div>
+
+    <div class="nav-bar">
+        <a href="#">Hot</a>
+        <a href="#">New</a>
+        <a href="#">Top</a>
+        <a href="#">Categories</a>
+        <a href="#">Upload</a>
+    </div>
+
+    <div class="meme-grid">
+        <div class="meme-card">
+            <img src="https://i.imgur.com/example1.jpg" alt="Funny meme 1">
+            <div class="meme-info">
+                <h3>Programming Jokes Be Like</h3>
+                <button class="like-button">👍 Like</button>
+            </div>
+        </div>
+
+        <div class="meme-card">
+            <img src="https://i.imgur.com/example2.jpg" alt="Funny meme 2">
+            <div class="meme-info">
+                <h3>When Monday Hits</h3>
+                <button class="like-button">👍 Like</button>
+            </div>
+        </div>
+
+        <div class="meme-card">
+            <img src="https://i.imgur.com/example3.jpg" alt="Funny meme 3">
+            <div class="meme-info">
+                <h3>Cat Logic</h3>
+                <button class="like-button">👍 Like</button>
+            </div>
+        </div>
+
+        <div class="meme-card">
+            <img src="https://i.imgur.com/example4.jpg" alt="Funny meme 4">
+            <div class="meme-info">
+                <h3>Gaming Life</h3>
+                <button class="like-button">👍 Like</button>
+            </div>
+        </div>
+
+        <div class="meme-card">
+            <img src="https://i.imgur.com/example5.jpg" alt="Funny meme 5">
+            <div class="meme-info">
+                <h3>Food Cravings</h3>
+                <button class="like-button">👍 Like</button>
+            </div>
+        </div>
+
+        <div class="meme-card">
+            <img src="https://i.imgur.com/example6.jpg" alt="Funny meme 6">
+            <div class="meme-info">
+                <h3>Weekend Plans</h3>
+                <button class="like-button">👍 Like</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
