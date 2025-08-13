@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats Everywhere!</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url('https://placekitten.com/1920/1080');
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .cat-card {
+            background: rgba(0,0,0,0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .cat-card:hover {
+            transform: scale(1.05);
+        }
+        .cat-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            padding: 20px;
+            background: rgba(0,0,0,0.5);
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐱 Cats Everywhere! 🐱</h1>
+    <div class="container">
+        <div class="cat-card"><img src="https://placekitten.com/400/400" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/401/401" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/402/402" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/403/403" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/404/404" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/405/405" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/406/406" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/407/407" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/408/408" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/409/409" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/410/410" alt="Cat"></div>
+        <div class="cat-card"><img src="https://placekitten.com/411/411" alt="Cat"></div>
+    </div>
+</body>
+</html>
