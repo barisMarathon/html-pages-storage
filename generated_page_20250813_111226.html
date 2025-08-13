@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çiçek Dünyası</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #ff69b4;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav {
+            background-color: #ff1493;
+            padding: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .flower-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .flower-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .flower-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        .flower-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .price {
+            color: #ff1493;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Çiçek Dünyası</h1>
+    </header>
+    <nav>
+        <a href="#anasayfa">Anasayfa</a>
+        <a href="#cicekler">Çiçekler</a>
+        <a href="#buketi">Buketler</a>
+        <a href="#iletisim">İletişim</a>
+    </nav>
+    <div class="container">
+        <div class="flower-grid">
+            <div class="flower-card">
+                <img src="https://picsum.photos/200/200" alt="Gül">
+                <h3>Kırmızı Gül</h3>
+                <p>Taze kırmızı gül buketi</p>
+                <p class="price">149.99 TL</p>
+            </div>
+            <div class="flower-card">
+                <img src="https://picsum.photos/200/200" alt="Orkide">
+                <h3>Mor Orkide</h3>
+                <p>Özel seçim orkide</p>
+                <p class="price">299.99 TL</p>
+            </div>
+            <div class="flower-card">
+                <img src="https://picsum.photos/200/200" alt="Papatya">
+                <h3>Papatya Buketi</h3>
+                <p>Taze papatya buketi</p>
+                <p class="price">89.99 TL</p>
+            </div>
+            <div class="flower-card">
+                <img src="https://picsum.photos/200/200" alt="Lale">
+                <h3>Lale Buketi</h3>
+                <p>Renkli lale buketi</p>
+                <p class="price">129.99 TL</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Çiçek Dünyası - Tüm Hakları Saklıdır</p>
+    </footer>
+</body>
+</html>
