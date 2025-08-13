@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Vibes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            color: #00ff88;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00ff88;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #00ff88, 0 0 40px #00ff88;
+            }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #00ff88, #00ffea);
+            color: #000;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cosmic Vibes</h1>
+        </header>
+        <div class="content">
+            <div class="card">
+                <h2>Digital Dreams</h2>
+                <p>Explore the intersection of technology and imagination in our digital playground.</p>
+                <a href="#" class="button">Explore</a>
+            </div>
+            <div class="card">
+                <h2>Creative Space</h2>
+                <p>Unleash your creativity and discover new possibilities in design and innovation.</p>
+                <a href="#" class="button">Create</a>
+            </div>
+            <div class="card">
+                <h2>Future Vision</h2>
+                <p>Step into tomorrow with cutting-edge concepts and futuristic experiences.</p>
+                <a href="#" class="button">Discover</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
