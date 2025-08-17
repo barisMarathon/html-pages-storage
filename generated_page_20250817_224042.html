@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lütfen Olsun</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff6b6b;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #4a4a4a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lütfen Olsun</h1>
+        <button class="button" onclick="showResult()">Lütfen</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function showResult() {
+            const responses = [
+                "Olsun! 😊",
+                "Tabii ki olsun! 🎉",
+                "Neden olmasın? ⭐",
+                "Olur tabii! 🌟",
+                "Elbette olsun! 💫"
+            ];
+            const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+            document.getElementById('result').innerHTML = randomResponse;
+        }
+    </script>
+</body>
+</html>
