@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .random-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .button {
+            background: #4ecdc4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+        }
+        .button:hover {
+            background: #45b7af;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Content Generator</h1>
+        <div class="random-content">
+            <div class="card">
+                <h3>Random Fact</h3>
+                <p>Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.</p>
+            </div>
+            <div class="card">
+                <h3>Random Number</h3>
+                <p>42</p>
+            </div>
+            <div class="card">
+                <h3>Random Quote</h3>
+                <p>"Life is what happens while you're busy making other plans." - John Lennon</p>
+            </div>
+            <div class="card">
+                <h3>Random Color</h3>
+                <p style="color: #FF4500;">Orangered (#FF4500)</p>
+            </div>
+        </div>
+        <button class="button" onclick="alert('Generating new random content...')">Generate New Content</button>
+    </div>
+</body>
+</html>
