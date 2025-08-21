@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Dining Experience</title>
+    <style>
+        :root {
+            --primary: #2a2a2a;
+            --accent: #d4af37;
+            --text: #ffffff;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: var(--text);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .menu-item p {
+            color: var(--text);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .menu-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .menu-item-name {
+            font-size: 1.25rem;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ELEGANT DINING</h1>
+            <p class="subtitle">A Culinary Journey of Exceptional Tastes</p>
+        </header>
+
+        <section class="menu-section">
+            <h2 class="section-title">Starters</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Classic Caesar Salad</h3>
+                        <span class="price">$12</span>
+                    </div>
+                    <p>Crisp romaine lettuce, house-made croutons, parmesan cheese, classic Caesar dressing</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">French Onion Soup</h3>
+                        <span class="price">$14</span>
+                    </div>
+                    <p>Caramelized onions, rich beef broth, crusty bread, melted Gruyère cheese</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <h2 class="section-title">Main Course</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Filet Mignon</h3>
+                        <span class="price">$42</span>
+                    </div>
+                    <p>8oz premium cut, truffle mashed potatoes, seasonal vegetables, red wine reduction</p>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name">Pan-Seared Salmon</h3>
+                        <span class="price">$34</span>
+                    </div>
+                    <p>Atlantic salmon, quinoa pilaf, roasted asparagus, lemon butter sauce</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
