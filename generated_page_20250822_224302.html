@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Restoran Menüsü</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .menu-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .price {
+            color: #e44d26;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rastgele Restoran Menüsü</h1>
+        <button onclick="generateMenu()">Yeni Menü Oluştur</button>
+        <div id="menu-container"></div>
+    </div>
+
+    <script>
+        const yemekler = [
+            {ad: "Mercimek Çorbası", fiyat: 35},
+            {ad: "Mantı", fiyat: 75},
+            {ad: "Karnıyarık", fiyat: 65},
+            {ad: "İskender", fiyat: 90},
+            {ad: "Pide", fiyat: 60},
+            {ad: "Lahmacun", fiyat: 40},
+            {ad: "Adana Kebap", fiyat: 85},
+            {ad: "Tavuk Şiş", fiyat: 70},
+            {ad: "Künefe", fiyat: 45},
+            {ad: "Baklava", fiyat: 50}
+        ];
+
+        function generateMenu() {
+            const menuContainer = document.getElementById('menu-container');
+            menuContainer.innerHTML = '';
+            
+            const shuffled = [...yemekler].sort(() => 0.5 - Math.random());
+            const selected = shuffled.slice(0, 5);
+
+            selected.forEach(yemek => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item';
+                menuItem.innerHTML = `
+                    <h3>${yemek.ad}</h3>
+                    <p class="price">${yemek.fiyat} TL</p>
+                `;
+                menuContainer.appendChild(menuItem);
+            });
+        }
+
+        // Sayfa yüklendiğinde ilk menüyü oluştur
+        generateMenu();
+    </script>
+</body>
+</html>
