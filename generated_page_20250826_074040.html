@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sahibinden.com</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+        header {
+            background: #fdb347;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo {
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav {
+            background: #f8f8f8;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .categories {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        .categories a {
+            color: #333;
+            text-decoration: none;
+        }
+        .search-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-box {
+            width: 50%;
+            padding: 10px;
+            border: 2px solid #fdb347;
+            border-radius: 5px;
+        }
+        .listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .listing-card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .listing-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .price {
+            color: #fdb347;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">sahibinden.com</a>
+    </header>
+    <nav>
+        <ul class="categories">
+            <li><a href="#">Emlak</a></li>
+            <li><a href="#">Vasıta</a></li>
+            <li><a href="#">Yedek Parça</a></li>
+            <li><a href="#">İkinci El</a></li>
+            <li><a href="#">İş Makineleri</a></li>
+        </ul>
+    </nav>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Ne aramıştınız?">
+    </div>
+    <div class="listings">
+        <div class="listing-card">
+            <img src="https://picsum.photos/300/200" alt="Listing">
+            <h3>Sahibinden Satılık Daire</h3>
+            <p class="price">750.000 TL</p>
+            <p>İstanbul, Kadıköy</p>
+        </div>
+        <div class="listing-card">
+            <img src="https://picsum.photos/300/201" alt="Listing">
+            <h3>2018 Model Volkswagen</h3>
+            <p class="price">385.000 TL</p>
+            <p>Ankara, Çankaya</p>
+        </div>
+        <div class="listing-card">
+            <img src="https://picsum.photos/300/202" alt="Listing">
+            <h3>iPhone 13 Pro Max</h3>
+            <p class="price">25.000 TL</p>
+            <p>İzmir, Karşıyaka</p>
+        </div>
+        <div class="listing-card">
+            <img src="https://picsum.photos/300/203" alt="Listing">
+            <h3>Kiralık Ofis</h3>
+            <p class="price">8.500 TL</p>
+            <p>Bursa, Nilüfer</p>
+        </div>
+    </div>
+</body>
+</html>
