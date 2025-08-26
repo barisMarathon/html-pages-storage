@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sahibinden.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background: #fdb03d;
+            padding: 15px;
+        }
+        .logo {
+            width: 180px;
+        }
+        .nav {
+            background: #333;
+            padding: 10px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .category-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .search-bar {
+            padding: 20px;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://www.sahibinden.com/assets/images/logo.png" alt="sahibinden.com" class="logo">
+    </div>
+    
+    <div class="nav">
+        <a href="#">Emlak</a>
+        <a href="#">Vasıta</a>
+        <a href="#">Yedek Parça</a>
+        <a href="#">İkinci El</a>
+        <a href="#">İş Makineleri</a>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Ne aramıştınız?">
+    </div>
+
+    <div class="categories">
+        <div class="category-card">
+            <h3>Emlak</h3>
+            <p>Konut, İş Yeri, Arsa</p>
+        </div>
+        <div class="category-card">
+            <h3>Vasıta</h3>
+            <p>Otomobil, Motosiklet, Deniz Araçları</p>
+        </div>
+        <div class="category-card">
+            <h3>İkinci El ve Sıfır</h3>
+            <p>Elektronik, Ev Eşyaları, Giyim</p>
+        </div>
+        <div class="category-card">
+            <h3>İş İlanları</h3>
+            <p>Tam Zamanlı, Yarı Zamanlı</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 sahibinden.com</p>
+    </div>
+</body>
+</html>
