@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adorable Cats</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            color: #ff66b2;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .cat-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .cat-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .cat-card:hover {
+            transform: scale(1.05);
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .paw-print {
+            font-size: 24px;
+            color: #ff66b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐱 Cute Cats Paradise 🐱</h1>
+        <div class="cat-gallery">
+            <div class="cat-card">
+                <img src="https://placekitten.com/400/300" alt="Cute kitten">
+                <h3>Fluffy</h3>
+                <p class="paw-print">🐾</p>
+            </div>
+            <div class="cat-card">
+                <img src="https://placekitten.com/401/300" alt="Playful kitten">
+                <h3>Whiskers</h3>
+                <p class="paw-print">🐾</p>
+            </div>
+            <div class="cat-card">
+                <img src="https://placekitten.com/402/300" alt="Sleepy kitten">
+                <h3>Mittens</h3>
+                <p class="paw-print">🐾</p>
+            </div>
+            <div class="cat-card">
+                <img src="https://placekitten.com/403/300" alt="Happy kitten">
+                <h3>Luna</h3>
+                <p class="paw-print">🐾</p>
+            </div>
+            <div class="cat-card">
+                <img src="https://placekitten.com/404/300" alt="Curious kitten">
+                <h3>Oliver</h3>
+                <p class="paw-print">🐾</p>
+            </div>
+            <div class="cat-card">
+                <img src="https://placekitten.com/405/300" alt="Sweet kitten">
+                <h3>Milo</h3>
+                <p class="paw-print">🐾</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
