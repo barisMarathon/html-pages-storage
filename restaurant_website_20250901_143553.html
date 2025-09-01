@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Dining Restaurant</title>
+    <style>
+        :root {
+            --primary: #f8b400;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: var(--light);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), #ff9100);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--light);
+            margin-top: 1rem;
+        }
+
+        .description {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fine Dining Restaurant</h1>
+            <p>Experience culinary excellence</p>
+        </header>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Sample Dish</h3>
+                <p class="description">As no menu data was provided, this is a sample menu item description showcasing the layout and styling.</p>
+                <div class="price">$25.00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Sample Dish</h3>
+                <p class="description">Another example menu item to demonstrate the responsive grid layout and glass morphism effect.</p>
+                <div class="price">$30.00</div>
+            </div>
+            <div class="menu-item">
+                <h3>Sample Dish</h3>
+                <p class="description">A third sample item showing how multiple menu items would be displayed in the grid system.</p>
+                <div class="price">$28.00</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
